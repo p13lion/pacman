@@ -18,6 +18,12 @@
         <source src="assets/Nto - La Clé Des Champs" type="audio/mp3">
     </audio>
     
+    var score = 0;
+    var scoreText;
+        
+    var bonus =0;
+    var bonusText;
+    
   
     <script type="text/javascript">
     var game = new Phaser.Game(448, 496, Phaser.AUTO);
@@ -167,6 +173,10 @@
         },
         eatDot: function (pacman, dot) {
             dot.kill();
+            var audio = new Audio('assets/.mp3');
+            audio.play()
+            score += 2;
+            scoreText.text = 'Score: ' + score;
             if (this.dots.total === 0)
             {
                 this.dots.callAll('revive');
