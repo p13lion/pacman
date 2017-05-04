@@ -62,7 +62,7 @@
             
             this.load.image('feed', 'assets/feed.png');
             this.load.image('tiles', 'assets/pacman-tiles.png');
-            this.load.spritesheet('Capture', 'assets/Capture.png', 30, 30);
+            this.load.spritesheet('Capture1', 'assets/Capture1.png', 30, 30);
             this.load.tilemap('map', 'assets/pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
             //  Needless to say, graphics (C)opyright Namco
         },
@@ -79,7 +79,7 @@
             //  Pacman should collide with everything except the safe tile
             this.map.setCollisionByExclusion([this.safetile], true, this.layer);
             //  Position Pacman at grid location 14x17 (the +8 accounts for his anchor)
-            this.pacman = this.add.sprite((14 * 16) + 8, (17 * 16) + 8, 'Capture', 0);
+            this.pacman = this.add.sprite((14 * 16) + 8, (17 * 16) + 8, 'Capture1', 0);
             this.pacman.anchor.set(0.5);
             this.pacman.animations.add('munch', [0, 1, 2, 1], 20, true);
             this.physics.arcade.enable(this.pacman);
