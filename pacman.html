@@ -77,6 +77,7 @@
             this.layer = this.map.createLayer('Pacman');
             this.dots = this.add.physicsGroup();
             this.coins = this.add.physicsGroup();
+	    this.apples = this.add.physicsGroup();
            
             
             this.map.createFromTiles(7, this.safetile, 'feed', this.layer, this.dots);
